@@ -6,7 +6,6 @@
     font-size: 42px;
     line-height: 56px;
     align-self: flex-start;
-    /* grid-area: profile__author; */
 }
 @media screen and (max-width: 697px) {
     .profile__author {

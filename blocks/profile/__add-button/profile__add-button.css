@@ -4,11 +4,20 @@
     border-radius: 2px;
     width: 150px;
     height: 50px;
+    min-height: 50px;
+    background-image: url(../../../images/plus.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22px;
+    justify-self: flex-end;
 }
 
 @media screen and (max-width: 697px) {
     .profile__add-button {
         margin-left: initial;
         width: 282px;
+        background-size: 16px;
+        justify-self: center;
+        width: 280px;
     }
 }

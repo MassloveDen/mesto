@@ -21,14 +21,12 @@
 
 /* -- profile -- */
 @import url(../blocks/profile/__section/profile__section.css);
-@import url(../blocks/profile/__avatar/profile__avatar.css);
 @import url(../blocks/profile/__avatar/_border-radius/profile__avatar_border-radius.css);
 @import url(../blocks/profile/__info/profile__info.css);
 @import url(../blocks/profile/__author/profile__author.css);
 @import url(../blocks/profile/__author-status/profile__author-status.css);
 @import url(../blocks/profile/__edit-button/profile__edit-button.css);
 @import url(../blocks/profile/__add-button/profile__add-button.css);
-
 
 /* -- elements -- */
 @import url(../blocks/elements/__list/elements__list.css);

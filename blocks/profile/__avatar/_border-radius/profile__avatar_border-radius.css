@@ -2,4 +2,10 @@
     border-radius: 50%;
     max-width: 120px;
     box-sizing: border-box;
+    justify-self: center;
+}
+@media screen and (max-width: 697px) {
+    .profile__avatar_border-radius {
+        margin-bottom: 14px;
+    }
 }
