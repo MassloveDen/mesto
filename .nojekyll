@@ -2,7 +2,7 @@ pwd
 /Users/students-yandex/dev/mesto
 
 git branch
-* master
+* main
 develop
 
 touch .nojekyll
