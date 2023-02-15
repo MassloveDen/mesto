@@ -14,7 +14,7 @@
     src: url("../vendor/fonts/inter/inter-500.woff2") format("woff2"),
         url("../vendor/fonts/inter/inter-500.woff") format("woff");
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 /* --900-- */

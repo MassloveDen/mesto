@@ -3,8 +3,9 @@
     border: 1px solid #fff;
     cursor: pointer;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .buttons:hover {
-    opacity: 0.7;
+    opacity: 0.6;
 }

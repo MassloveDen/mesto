@@ -1,0 +1,8 @@
+@import url("./__image/element__image.css");
+@import url("./__body/element__body.css");
+@import url("./__figcaption/element__figcaption.css");
+@import url("./__like-button/element__like-button.css");
+
+.element {
+    margin: 0;
+}
