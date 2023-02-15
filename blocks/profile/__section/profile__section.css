@@ -1,0 +1,14 @@
+.profile__section {
+    margin-bottom: 50px;
+    display: grid;
+    gap: 30px;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, minmax(min-content, max-content)) 10fr;
+    align-items: center;
+}
+@media screen and (max-width: 697px) {
+    .profile__section {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}

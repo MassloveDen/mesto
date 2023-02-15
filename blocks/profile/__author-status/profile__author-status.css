@@ -1,0 +1,16 @@
+.profile__author-status {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    /* grid-area: profile__author-status; */
+}
+
+@media screen and (max-width: 697px) {
+    .profile__author-status {
+        font-size: 14px;
+        text-align: center;
+    }
+}
