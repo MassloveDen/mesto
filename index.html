@@ -8,116 +8,103 @@
     <title>Mesto</title>
 </head>
 
-<body class="root page">
+<body class="root">
 
-    <header class="header header__section header_transparent-border">
-        <img src="images/logo.png" alt="Логотип Mesto Russia">
+
+    <header class="header section">
+        <img class="header__logo" src="images/logo.svg" alt="Логотип Mesto Russia">
     </header>
 
-    <main class="content main__section">
+    <main class="content section section__content">
 
-        <section class="profile profile__section">
-            <img src="images/jacques-photo.png" alt="Портрет Жак-Ива Кусто"
-                class="profile__avatar profile__avatar_border-radius">
+        <section class="profile section__profile">
+            <img src="images/jacques-photo.png" alt="Портрет Жак-Ива Кусто" class="profile__avatar">
             <div class="profile__info">
-                <p class="profile__author">Жак-Ив Кусто<button class="profile__edit-button buttons"></button></p>
-                <p class="profile__author-status">Исследователь океана</p>
+                <h1 class="profile__author section__title">Жак-Ив Кусто</h1>
+                <button type="button" class="profile__edit-button buttons"></button>
+                <p class="profile__author-status section__subtitle">Исследователь океана</p>
             </div>
-            <button class="profile__add-button buttons"></button>
+            <button type="button" class="profile__add-button buttons"></button>
         </section>
-
-        <!-- <section class="popup">
-            <form action="" class="popup__container">
-
-            </form>
-        </section> -->
 
         <section class="elements">
             <ul class="elements__list">
-
                 <li class="elements__item">
-                    <figure class="element card">
+                    <figure class="element">
                         <img src="images/karachaevsk.png" alt="Карачаевск" class="element__image">
-                        <div class="card__body">
-                            <figcaption class="element__figcaption element__figcaption_text-decoration">Карачаевск
-                            </figcaption>
-                            <button src="" alt="" class="element__like-button buttons" type="button"><img
-                                    src="images/like.png" alt="Like-button" class="element__like-button-image"></button>
+                        <div class="element__body">
+                            <p class="element__figcaption section__subtitle">Карачаевск</p>
+                            <button class="element__like-button buttons" type="button"></button>
                         </div>
                     </figure>
                 </li>
-
                 <li class="elements__item">
-                    <figure class="element card">
+                    <figure class="element element__figure">
                         <img src="images/elbrus.png" alt="Гора Эльбрус" class="element__image">
-                        <div class="card__body">
-                            <figcaption class="element__figcaption element__figcaption_text-decoration">Гора Эльбрус
-                            </figcaption>
-                            <button src="" alt="" class="element__like-button buttons" type="button"><img
-                                    src="images/like.png" alt="Like-button" class="element__like-button-image"></button>
+                        <div class="element__body">
+                            <p class="element__figcaption section__subtitle">Гора Эльбрус</p>
+                            <button class="element__like-button buttons" type="button"></button>
                         </div>
                     </figure>
                 </li>
-
                 <li class="elements__item">
-                    <figure class="element card">
-                        <img src="images/dombay.png" alt="Домбай" class="element__image">
-                        <div class="card__body">
-                            <figcaption class="element__figcaption element__figcaption_text-decoration">Домбай
-                            </figcaption>
-                            <button src="" alt="" class="element__like-button buttons" type="button"><img
-                                    src="images/like.png" alt="Like-button" class="element__like-button-image"></button>
+                    <figure class="element element__figure">
+                        <img src="images/dombay.png" alt="Добай" class="element__image">
+                        <div class="element__body">
+                            <p class="element__figcaption section__subtitle">Карачаевск</p>
+                            <button class="element__like-button buttons" type="button"></button>
                         </div>
                     </figure>
                 </li>
-
                 <li class="elements__item">
-                    <figure class="element card">
+                    <figure class="element element__figure">
                         <img src="images/elbrus.png" alt="Гора Эльбрус" class="element__image">
-                        <div class="card__body">
-                            <figcaption class="element__figcaption element__figcaption_text-decoration">Гора Эльбрус
-                            </figcaption>
-                            <button src="" alt="" class="element__like-button buttons" type="button"><img
-                                    src="images/like.png" alt="Like-button" class="element__like-button-image"></button>
+                        <div class="element__body">
+                            <p class="element__figcaption section__subtitle">Гора Эльбрус</p>
+                            <button class="element__like-button buttons" type="button"></button>
                         </div>
                     </figure>
                 </li>
-
                 <li class="elements__item">
-                    <figure class="element card">
-                        <img src="images/dombay.png" alt="Домбай" class="element__image">
-                        <div class="card__body">
-                            <figcaption class="element__figcaption element__figcaption_text-decoration">Домбай
-                            </figcaption>
-                            <button src="" alt="" class="element__like-button buttons" type="button"><img
-                                    src="images/like.png" alt="Like-button" class="element__like-button-image"></button>
+                    <figure class="element element__figure">
+                        <img src="images/dombay.png" alt="Добай" class="element__image">
+                        <div class="element__body">
+                            <p class="element__figcaption section__subtitle">Карачаевск</p>
+                            <button class="element__like-button buttons" type="button"></button>
                         </div>
                     </figure>
                 </li>
-
                 <li class="elements__item">
-                    <figure class="element card">
+                    <figure class="element element__figure">
                         <img src="images/karachaevsk.png" alt="Карачаевск" class="element__image">
-                        <div class="card__body">
-                            <figcaption class="element__figcaption element__figcaption_text-decoration">
-                                Карачаево-Черкессия
-                            </figcaption>
-                            <button src="" alt="" class="element__like-button buttons" type="button"><img
-                                    src="images/like.png" alt="Like-button" class="element__like-button-image"></button>
+                        <div class="element__body">
+                            <p class="element__figcaption section__subtitle">Карачаево-Черкессия</p>
+                            <button class="element__like-button buttons" type="button"></button>
                         </div>
                     </figure>
                 </li>
-
             </ul>
-
         </section>
-
     </main>
 
-    <footer class="footer footer__section">
-        <p class="footer__info">&copy 2023 Mesto Russia</p>
+    <footer class="footer section section__footer">
+        <p class="section__text">&copy; 2023 Mesto Russia</p>
     </footer>
 
+    <section class="popup section__popup">
+        <div class="popup__container">
+            <form name="popup-form" class="popup__form">
+                <h2 class="popup__heading section__subtitle">Редактировать профиль</h2>
+                <fieldset class="popup__fields">
+                    <input name="input-name" type="text" value="" class="popup__input popup__input_name">
+                    <input name="input-job" type="text" value="" class="popup__input popup__input_job">
+                </fieldset>
+                <input name="save-button" type="submit" value="Сохранить" class="popup__save-button">
+            </form>
+            <button name="close-button" type="button" value="" class="popup__close-button buttons"></button>
+        </div>
+    </section>
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>
