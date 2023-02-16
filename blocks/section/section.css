@@ -1,9 +1,0 @@
-.section {
-    max-width: 882px;
-}
-
-@media screen and (max-width: 920px) {
-    .section {
-        max-width: calc(100vw - 19px * 2);
-    }
-}
