@@ -4,6 +4,7 @@
     background-image: url("../../../images/add-button.svg");
     background-repeat: no-repeat;
     background-position: center;
+    background-color: #000;
     border: 2px solid #fff;
     border-radius: 2px;
     margin: 0 10px 0 0;
@@ -25,7 +26,6 @@
   }
   
   @media screen and (max-width: 590px) {
-    /*тут было от 390px*/
     .profile__add-button {
       min-width: 282px;
       margin: 0 auto;

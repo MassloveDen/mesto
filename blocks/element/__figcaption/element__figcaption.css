@@ -1,12 +1,12 @@
 .element__figcaption {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    font-weight: 900;
-    color: #000;
-    font-size: 24px;
-    line-height: 29px;
-    margin: 25px auto 31px 21px;
-    line-height: 1.2;
     width: 190px;
-}
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #000;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 25px auto 31px 21px;
+  }
+  

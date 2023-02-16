@@ -10,19 +10,17 @@
 
 <body>
   <div class="page">
-    <!--PAGE-->
+
     <header class="header">
-      <!--HEADER-->
       <img src="./images/logo_mesto.svg" alt="Логотип Место" class="header__logo">
     </header>
-    <!--END OF HEADER-->
+
     <main class="content">
       <section class="profile">
-        <!--PROFILE-->
         <div class="profile__container">
           <img src="./images/profile_img.jpg" alt="Аватар профиля" class="profile__avatar">
           <div class="profile__info">
-            <div class="profile__name-holder">
+            <div class="profile__name-holder"> #profile__name
               <h1 class="profile__name">Жак-Ив Кусто</h1> #profile__author
               <button type="button" class="profile__edit-button"></button>
             </div>
@@ -32,11 +30,9 @@
         <button type="button" class="profile__add-button"></button>
       </section>
 
-      <section class="photo-grid" >#elements
-        <!--GRID-->
+      <section class="photo-grid">#elements
         <div class="card"> #element
-          <img src="./images/Karachayevsk.jpg" alt="Полуразрушенный храм на фоне поросшей лесом горы"
-            class="card__image"> element__image
+          <img class="card__image"> element__image
           <h2 class="card__title">Карачаевск</h2> #element_figcaption
           <button type="button" class="card__like"></button> #element__like-button
         </div>
@@ -72,12 +68,11 @@
       <p class="footer__copyright">&copy; Mesto Russia</p>
     </footer>
   </div>
-  <!--END OF PAGE-->
-  <!--POPUP-->
+
   <div class="popup">
     <div class="popup__container">
-      <h2 class="popup__title">Редактировать профиль</h2>
-      <form class="popup__form" name="edit-profile" novalidate>
+      <h2 class="popup__title">Редактировать профиль</h2> #popup__heading
+      <form class="popup__form" name="edit-profile" novalidate> 
         <fieldset class="popup__fieldset">
           <input type="text" minlength="1" maxlength="50" class="popup__input popup__input_name_name" name="name"
             id="name-input" placeholder="Имя" required>

@@ -1,17 +1,32 @@
 .profile__author-status {
-    font-weight: normal;
-    color: #fff;
+    max-width: 336px;
+    font-weight: 400;
     font-size: 18px;
-    line-height: 22px;
-    grid-area: profile__author-status;
-    max-width: 295px;
+    line-height: 1.22;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
 }
 
-@media screen and (max-width: 697px) {
+@media screen and (max-width: 790px) {
     .profile__author-status {
+        display: block;
+        max-width: 270px;
         font-size: 14px;
-        line-height: 17px;
-        text-align: right;
-        max-width: 201px;
+        line-height: 1.21;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .profile__author-status {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .profile__author-status {
+        margin: 14px auto 0;
     }
 }
