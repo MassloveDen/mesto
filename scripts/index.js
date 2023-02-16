@@ -8,7 +8,7 @@ let nameInput = document.querySelector(".popup__input_name");
 let jobInput = document.querySelector(".popup__input_job");
 
 let profileAuthor = document.querySelector(".profile__author");
-let profileAuthorStatus = document.querySelector(".profile__author-status");
+let profileAuthorStatus = document.querySelector(".profile__job");
 
 function popupToggle() {
     popup.classList.toggle("popup_opened");

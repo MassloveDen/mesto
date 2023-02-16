@@ -1,4 +1,4 @@
-.profile__author-status {
+.profile__job {
     max-width: 336px;
     font-weight: 400;
     font-size: 18px;
@@ -11,7 +11,7 @@
 }
 
 @media screen and (max-width: 790px) {
-    .profile__author-status {
+    .profile__job {
         display: block;
         max-width: 270px;
         font-size: 14px;
@@ -20,13 +20,13 @@
 }
 
 @media screen and (max-width: 560px) {
-    .profile__author-status {
+    .profile__job {
         margin: auto;
     }
 }
 
 @media screen and (max-width: 390px) {
-    .profile__author-status {
+    .profile__job {
         margin: 14px auto 0;
     }
 }
