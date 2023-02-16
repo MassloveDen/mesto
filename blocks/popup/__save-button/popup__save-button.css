@@ -1,5 +1,5 @@
 .popup__save-button {
-    font-family: Inter, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: normal;
     background-color: #000;
@@ -8,19 +8,35 @@
     border: 0;
     cursor: pointer;
     border-radius: 2px;
-    margin: 0;
+    margin: 18px auto 0;
     padding: 0;
     font-size: 18px;
     line-height: 22px;
+    width: 358px;
+    text-align: center;
 }
 
 .popup__save-button:hover {
     opacity: 0.8;
 }
 
-@media screen and (max-width: 697px) {
+.popup__save-button:hover {
+    background-color: #000;
+    opacity: .8;
+    transition: .8s ease-in-out;
+  }
+  
+  @media screen and (max-width: 590px) {
     .popup__save-button {
-        font-size: 14px;
-        line-height: 17px;
+      width: 84%;
     }
-}
+  }
+  
+  @media screen and (max-width: 390px) {
+    .popup__save-button {
+      width: 238px;
+      height: 46px;
+      font-size: 14px;
+      line-height: 1.21;
+    }
+  }

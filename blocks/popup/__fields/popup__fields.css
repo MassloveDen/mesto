@@ -1,5 +1,6 @@
 .popup__fields {
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    border: none;
     padding: 0;
-    border: 0;
 }

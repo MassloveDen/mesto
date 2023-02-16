@@ -2,15 +2,11 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    margin-right: 25px;
     font-weight: 900;
     color: #000;
     font-size: 24px;
     line-height: 29px;
-}
-
-@media screen and (max-width: 697px) {
-    .element__figcaption {
-        text-align: center;
-    }
+    margin: 25px auto 31px 21px;
+    line-height: 1.2;
+    width: 190px;
 }
