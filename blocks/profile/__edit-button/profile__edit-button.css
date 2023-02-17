@@ -24,3 +24,11 @@
     margin-left: 10px;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .profile__edit-button {
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+  }
+}
