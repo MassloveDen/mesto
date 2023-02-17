@@ -7,7 +7,7 @@ let formElement = document.querySelector(".popup__form");
 let nameInput = document.querySelector(".popup__input_name");
 let jobInput = document.querySelector(".popup__input_job");
 
-let profileAuthor = document.querySelector(".profile__author");
+let profileAuthor = document.querySelector(".profile__name");
 let profileAuthorStatus = document.querySelector(".profile__job");
 
 function popupToggle() {
