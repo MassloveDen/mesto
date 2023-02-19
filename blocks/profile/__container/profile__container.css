@@ -1,6 +1,7 @@
 .profile__container {
   display: flex;
   position: relative;
+  column-gap: 5px;
 }
 
 @media screen and (max-width: 560px) {
