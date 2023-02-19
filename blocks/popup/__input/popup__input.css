@@ -5,22 +5,10 @@
     margin: 0 auto 30px;
     padding: 0;
     border: 0;
-    width: 358px;
+    width: 100%;
     box-sizing: border-box;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     font-size: 14px;
     line-height: 17px;
     color: #000;
 }
-
-@media screen and (max-width: 590px) {
-    .popup__input {
-      width: 84%;
-    }
-  }
-
-@media screen and (max-width: 390px) {
-    .popup__input {
-      width: 238px;
-    }
-  }

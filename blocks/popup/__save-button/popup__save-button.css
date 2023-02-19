@@ -4,15 +4,16 @@
     font-weight: normal;
     background-color: #000;
     color: #fff;
-    min-height: 50px;
+    padding: 14px 0;
     border: 0;
     cursor: pointer;
     border-radius: 2px;
     margin: 18px auto 0;
-    padding: 0;
+    box-sizing: border-box;
     font-size: 18px;
     line-height: 22px;
-    width: 358px;
+    width: 100%;
+    max-width: 358px;
     text-align: center;
 }
 
@@ -21,17 +22,9 @@
     opacity: .8;
     transition: .8s ease-in-out;
   }
-  
-  @media screen and (max-width: 590px) {
-    .popup__save-button {
-      width: 84%;
-    }
-  }
-  
+
   @media screen and (max-width: 390px) {
     .popup__save-button {
-      width: 238px;
-      height: 46px;
       font-size: 14px;
       line-height: 1.21;
     }
