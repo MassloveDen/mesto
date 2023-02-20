@@ -1,10 +1,10 @@
 .popup__heading {
+    font-family: "Inter", "Helvetica", sans-serif;
     font-weight: 900;
     font-size: 24px;
     line-height: 29px;
-    margin: 0 auto 54px;
     color: #000;
-    font-family: "Inter", "Helvetica", sans-serif;
+    margin: 0 auto 54px;
 }
 
 @media screen and (max-width: 590px) {
