@@ -7,18 +7,10 @@
     margin: 0 auto 54px;
 }
 
-@media screen and (max-width: 590px) {
-    .popup__heading {
-        font-size: 20px;
-        text-align: center;
-    }
-}
-
 @media screen and (max-width: 390px) {
     .popup__heading {
         font-size: 18px;
         line-height: 1.22;
-        text-align: center;
         margin-bottom: 75px;
     }
 }
