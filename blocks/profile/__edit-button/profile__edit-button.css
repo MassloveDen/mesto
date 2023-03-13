@@ -14,7 +14,7 @@
   
   align-self: center;
   grid-area: profile__edit-button;
-  top: -10px;
+  top: 4px;
   position: relative;
 }
 
@@ -29,7 +29,7 @@
     width: 18px;
     height: 18px;
     /* margin-left: 10px; */
-    top: -17px;
+    top: 2px;
   }
 }
 

@@ -48,8 +48,8 @@ const galleryCloseButton = galleryPopup.querySelector(".popup__close-button");
 // const formElement = document.querySelector(".popup__form");
 
 // Submit buttons
-const editProfileForm = document.querySelector(".popup-form_type_edit-profile");
-const addCardForm = document.querySelector(".popup-form_type_add-card");
+const editProfileForm = document.querySelector(".popup__form_type_edit-profile");
+const addCardForm = document.querySelector(".popup__form_type_add-card");
 
 const nameInput = document.querySelector(".popup__input_name");
 const jobInput = document.querySelector(".popup__input_job");

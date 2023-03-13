@@ -40,6 +40,7 @@
   background-color: #000;
   margin: 45px auto 60px;
   max-width: 882px;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 920px) {
