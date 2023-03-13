@@ -1,7 +1,13 @@
-.popup__fields {
+/* .popup__fields {
     display: flex;
     flex-direction: column;
     border: none;
     padding: 0;
     margin: 0;
+} */
+
+.popup__fields {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }

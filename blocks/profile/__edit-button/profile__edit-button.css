@@ -5,12 +5,16 @@
   width: 24px;
   height: 24px;
   background-color: #000;
+
   background-repeat: no-repeat;
   border: 1px solid #fff;
   outline: none;
   cursor: pointer;
   margin: 0 0 0 18px;
   transition: .6s ease-in-out;
+  
+  align-self: center;
+  grid-area: profile__edit-button;
 }
 
 .profile__edit-button:hover {

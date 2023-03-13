@@ -1,4 +1,4 @@
-.profile {
+/* .profile {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,5 +10,20 @@
 @media screen and (max-width: 790px) {
   .profile {
     flex-direction: column;
+  }
+} */
+
+.profile {
+  margin-bottom: 50px;
+  display: grid;
+  gap: 0 30px;
+  grid-gap: 0 30px;
+  grid-template-columns: repeat(2, minmax(min-content, max-content)) 1fr;
+  align-items: center;
+}
+@media screen and (max-width: 697px) {
+  .profile {
+      grid-template-columns: 1fr;
+      margin-bottom: 36px;
   }
 }
