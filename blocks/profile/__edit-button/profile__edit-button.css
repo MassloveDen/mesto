@@ -5,16 +5,17 @@
   width: 24px;
   height: 24px;
   background-color: #000;
-
+  
   background-repeat: no-repeat;
   border: 1px solid #fff;
   outline: none;
   cursor: pointer;
-  margin: 0 0 0 18px;
   transition: .6s ease-in-out;
   
   align-self: center;
   grid-area: profile__edit-button;
+  top: -10px;
+  position: relative;
 }
 
 .profile__edit-button:hover {
@@ -22,12 +23,13 @@
   transition: .6s ease-in-out;
 }
 
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 697px) {
   .profile__edit-button {
     background-size: 7.5px;
     width: 18px;
     height: 18px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
+    top: -17px;
   }
 }
 

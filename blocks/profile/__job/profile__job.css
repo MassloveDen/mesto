@@ -41,6 +41,7 @@
     line-height: 22px;
     grid-area: profile__job;
     max-width: 295px;
+    margin: 0;
 }
 
 @media screen and (max-width: 697px) {
