@@ -12,6 +12,9 @@
         "profile__job .";
     gap: 16px 17px;
     grid-gap: 16px 17px;
+    text-overflow: ellipsis " [..]";
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 697px) {

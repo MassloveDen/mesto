@@ -1,9 +1,3 @@
-/* .element__image {
-    height: 282px;
-    border-radius: 10px 10px 0 0;
-} */
-
-
 .element__image {
     object-fit: cover;
     background-color: rgb(230, 230, 230);

@@ -1,7 +1,6 @@
 .header {
-  /* max-width: 882px; */
-  margin: 0 auto;
-  margin-bottom: 77px;
+  margin: 5px auto 77px;
+  padding: 40px 0;
 }
 
 @media screen and (max-width: 697px) {
@@ -14,23 +13,12 @@
     content: "";
     position: relative;
     display: block;
-    left: 0;
-    bottom: -41px;
+    left: 50%;
+    bottom: -40px;
     box-sizing: border-box;
     border-bottom: 1px solid rgba(84, 84, 84, 0.7);
     width: 100%;
     max-width: 882px;
-}
-
-/* @media screen and (max-width: 920px) {
-  .header {
-      max-width: calc(100vw - 19px * 2);
-  }
-} */
-
-@media screen and (max-width: 882px) {
-    .header::after {
-        width: 100vw;
-        left: -19px;  
-    } 
+    transform: translateX(-50%);
+    
 }
