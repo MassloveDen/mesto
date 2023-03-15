@@ -81,10 +81,6 @@ const handleImagePreview = (details) => {
 
 renderCards();
 
-function popupToggle(element) {
-    element.classList.toggle("popup_opened");
-}
-
 function openPopup(element) {
     element.classList.add("popup_opened");
 } 
@@ -107,22 +103,20 @@ profileEditPopup.addEventListener("click", backgroundListener);
 cardAddPopup.addEventListener("click", backgroundListener);
 galleryPopup.addEventListener("click", backgroundListener);
 
-profileCloseButton.addEventListener("click", () => popupToggle(profileEditPopup));
-cardCloseButton.addEventListener("click", () => popupToggle(cardAddPopup));
-galleryCloseButton.addEventListener("click", () => popupToggle(galleryPopup))
+profileCloseButton.addEventListener("click", () => closePopup(profileEditPopup));
+cardCloseButton.addEventListener("click", () => closePopup(cardAddPopup));
+galleryCloseButton.addEventListener("click", () => closePopup(galleryPopup))
 
 // Open popups
 profileEditButton.addEventListener("click", () => {
-    popupToggle(profileEditPopup);
-    if (profileEditPopup.classList.contains("popup_opened")) {
-        nameInput.value = authorName.textContent;
-        jobInput.value = authorJob.textContent;
-    }
+    openPopup(profileEditPopup);
+    nameInput.value = authorName.textContent;
+    jobInput.value = authorJob.textContent;
 });
+// Спасибо за действительно полезные комментарии, Евгений!
 cardAddButton.addEventListener("click", () => {
-    popupToggle(cardAddPopup);
-    titleInput.value = "";
-    linkInput.value = "";
+    openPopup(cardAddPopup);
+    cardAddForm.reset();
 });
 
 // Submit handlers
@@ -130,7 +124,7 @@ profileEditForm.addEventListener("submit", (e) => {
     e.preventDefault();
     authorName.textContent = nameInput.value;
     authorJob.textContent = jobInput.value;
-    popupToggle(profileEditPopup);
+    closePopup(profileEditPopup);
 });
 cardAddForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -139,5 +133,6 @@ cardAddForm.addEventListener("submit", (e) => {
         link: linkInput.value,
     });
     listCards.prepend(cardItem);
-    popupToggle(cardAddPopup);
+    closePopup(cardAddPopup);
 });
+

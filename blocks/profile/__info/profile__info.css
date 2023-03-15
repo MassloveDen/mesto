@@ -1,10 +1,3 @@
-/* .profile__info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 0 32px;
-} */
-
 .profile__info {
     display: grid;
     grid-template-areas:
@@ -12,7 +5,7 @@
         "profile__job .";
     gap: 16px 17px;
     grid-gap: 16px 17px;
-    text-overflow: ellipsis " [..]";
+    text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
 }

@@ -7,7 +7,7 @@
     grid-area: profile__job;
     max-width: 295px;
     margin: 0;
-    text-overflow: ellipsis " [..]";
+    text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
 }
