@@ -1,5 +1,3 @@
-
-
 const popup = document.querySelector(".popup");
 
 const profileEditPopup = document.querySelector(".popup_type_popup-edit-profile");

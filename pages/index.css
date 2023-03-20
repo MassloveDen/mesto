@@ -37,6 +37,7 @@
 @import url("../blocks/elements/__list/elements__list.css");
 @import url("../blocks/content/content.css");
 @import url("../blocks/element/__like-button/_active/element__like-button_active.css");
+@import url("../blocks/error/error.css");
 
 body{
     background-color: #000;
