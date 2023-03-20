@@ -83,13 +83,15 @@ renderCards();
 
 function openPopup(element) {
     element.classList.add("popup_opened");
+    document.addEventListener("keydown", handleEscapeButton);
 } 
 
 function closePopup(element) {
     element.classList.remove("popup_opened");
+    document.removeEventListener("keydown", handleEscapeButton);
 } 
 
-function backgroundListener(event) { 
+function handleClickOnOverlay(event) { 
     const popup = event.currentTarget;
     if (event.target !== popup) { 
         return; 
@@ -98,10 +100,17 @@ function backgroundListener(event) {
     popupToggle(popup); 
 };
 
+function handleEscapeButton(evt) {
+    if (evt.key === "Escape") {
+        const popupOpened = document.querySelector(".popup_opened");
+        closePopup(popupOpened);
+    };
+};
+
 // Close popups
-profileEditPopup.addEventListener("click", backgroundListener);
-cardAddPopup.addEventListener("click", backgroundListener);
-galleryPopup.addEventListener("click", backgroundListener);
+profileEditPopup.addEventListener("click", handleClickOnOverlay);
+cardAddPopup.addEventListener("click", handleClickOnOverlay);
+galleryPopup.addEventListener("click", handleClickOnOverlay);
 
 profileCloseButton.addEventListener("click", () => closePopup(profileEditPopup));
 cardCloseButton.addEventListener("click", () => closePopup(cardAddPopup));
@@ -110,13 +119,18 @@ galleryCloseButton.addEventListener("click", () => closePopup(galleryPopup))
 // Open popups
 profileEditButton.addEventListener("click", () => {
     openPopup(profileEditPopup);
+    saveButton.classList.add("popup__save-button_invalid");
     nameInput.value = authorName.textContent;
     jobInput.value = authorJob.textContent;
 });
-// Спасибо за действительно полезные комментарии, Евгений!
+
 cardAddButton.addEventListener("click", () => {
     openPopup(cardAddPopup);
     cardAddForm.reset();
+    const formElement = document.querySelector(".popup__form");
+    const buttonElement = document.querySelector(".popup__save-button");
+    const inactiveButtonClass = (".popup__save-button");
+    toggleButtonState(formElement, buttonElement, inactiveButtonClass);
 });
 
 // Submit handlers

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./pages/index.css">
     <script src="scripts/cards.js" defer></script>
     <script src="scripts/index.js" defer></script>
+    <script src="scripts/validate.js" defer></script>
 </head>
 
 <body>
@@ -45,8 +46,10 @@
                 <form name="popup-form-edit-prifile" class="popup__form popup__form_type_edit-profile">
                 <h2 class="popup__heading">Редактировать профиль</h2>
                 <fieldset class="popup__fields">
-                        <input name="input-name" type="text" value="" class="popup__input popup__input_name">
-                        <input name="input-job" type="text" value="" class="popup__input popup__input_job">
+                        <input name="input-name" type="text" value="" class="popup__input popup__input_name" id="user-name"
+                            class="popup__input popup__input_title" minlength="2" maxlength="40" required autocomplete="off">
+                        <input name="input-job" type="text" value="" class="popup__input popup__input_job" id="about"
+                            minlength="2" maxlength="200" required autocomplete="off">
                         <button name="save-button" type="submit" value="Сохранить" class="popup__save-button">Сохранить</button>
                     </fieldset>
                 <button name="close-button" type="button" value="" class="popup__close-button buttons"></button>
@@ -60,9 +63,9 @@
                     <h2 class="popup__heading">Новое место</h2>
                     <fieldset class="popup__fields">
                         <input name="input-title" type="text" value="" placeholder="Название"
-                            class="popup__input popup__input_title">
+                            class="popup__input popup__input_title" minlength="2" maxlength="30" required id="name-card" autocomplete="off">
                         <input name="input-link" type="text" value="" placeholder="Ссылка на картинку"
-                            class="popup__input popup__input_link">
+                            class="popup__input popup__input_link" required id="link" autocomplete="off">
                     </fieldset>
                     <input name="save-button" type="submit" value="Сохранить" class="popup__save-button">
                     <button name="close-button" type="button" value="" class="popup__close-button buttons"></button>
