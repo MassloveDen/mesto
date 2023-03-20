@@ -36,6 +36,7 @@ const templateCard = document.querySelector(".element-template");
 const imagePopupGallery = document.querySelector(".popup__image");
 const titlePopupGallery = document.querySelector(".popup__title");
 
+const saveButton = document.querySelector(".popup__save-button");
 
 const renderCards = () => {
     initialCards.forEach((element) => {
@@ -96,8 +97,7 @@ function handleClickOnOverlay(event) {
     if (event.target !== popup) { 
         return; 
     };
-
-    popupToggle(popup); 
+    closePopup(popup); 
 };
 
 function handleEscapeButton(evt) {
@@ -121,7 +121,10 @@ profileEditButton.addEventListener("click", () => {
     openPopup(profileEditPopup);
     saveButton.classList.add("popup__save-button_invalid");
     nameInput.value = authorName.textContent;
+    console.log(nameInput.value);
     jobInput.value = authorJob.textContent;
+    console.log(jobInput.value);
+
 });
 
 cardAddButton.addEventListener("click", () => {
