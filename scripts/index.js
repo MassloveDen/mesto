@@ -74,8 +74,7 @@ const handleImagePreview = (details) => {
     imagePopupGallery.src = details.link;
     imagePopupGallery.alt = details.name;
     titlePopupGallery.textContent = details.name;
-
-    popupToggle(galleryPopup);
+    openPopup(galleryPopup);
 };
 
 renderCards();
