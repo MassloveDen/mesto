@@ -32,7 +32,7 @@ function setEventListener(formElement, {inputSelector, submitButtonSelector, ...
       formElement.querySelectorAll(inputSelector)
     );
     const buttonElement = formElement.querySelector(submitButtonSelector);
-
+    disableButtonSubmit(buttonElement);
     inputElements.forEach((input) => {
         input.addEventListener("input", (evt) => {
             checkInputValidity(formElement, evt.target, {...rest});
@@ -53,8 +53,11 @@ function enableValidation({formSelector, ...rest}) {
         setEventListener(form, {...rest});
     });
 }
-
-
+function disableButtonSubmit(buttonElement) {
+    console.log(buttonElement);
+    buttonElement.classList.add('popup__save-button_invalid')
+    buttonElement.disabled = true;
+}
 enableValidation({
     formSelector: '.popup__form',
     inputSelector: '.popup__input',

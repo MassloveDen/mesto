@@ -17,11 +17,11 @@
     text-align: center;
 }
 
-.popup__save-button:hover {
+/* .popup__save-button:hover {
     background-color: #000;
     opacity: .8;
     transition: .8s ease-in-out;
-  }
+  } */
 
   @media screen and (max-width: 390px) {
     .popup__save-button {

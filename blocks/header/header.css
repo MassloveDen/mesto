@@ -1,6 +1,6 @@
 .header {
-  margin: 5px auto 77px;
-  padding: 40px 0;
+  margin: 45px auto 35px;
+  /* padding: 40px 0; */
 }
 
 @media screen and (max-width: 697px) {
@@ -14,11 +14,9 @@
     position: relative;
     display: block;
     left: 50%;
-    bottom: -40px;
     box-sizing: border-box;
     border-bottom: 1px solid rgba(84, 84, 84, 0.7);
     width: 100%;
     max-width: 882px;
     transform: translateX(-50%);
-    
 }
