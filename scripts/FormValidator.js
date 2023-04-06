@@ -7,6 +7,8 @@ export class FormValidator {
     this._inactiveButtonClass = settings.inactiveButtonClass;
     this._inputErrorClass = settings.inputErrorClass;
     this._errorClass = settings.errorClass;
+    this._button = this._form.querySelector(this._submitButtonSelector);
+    this._inputList = Array.from(this._form.querySelectorAll(this._inputSelector));
   }
 
   _showError(input) {
@@ -33,39 +35,34 @@ export class FormValidator {
     }
   }
 
-  addInactiveButtonClass(buttonElement) {
-    buttonElement.classList.add(this._inactiveButtonClass);
-    buttonElement.disabled = true;
+  _isInputValid() {
+    return this._inputList.some((input) => {
+      return !input.validity.valid;
+    })
   }
 
-  _toggleButtonState(buttonElement) {
-    if (this._form.checkValidity()) {
-      buttonElement.classList.remove(this._inactiveButtonClass);
-      buttonElement.disabled = false;
+  _toggleSubmitButton() {
+    if (this._isInputValid()) {
+      this._button.classList.add(this._inactiveButtonClass);
+      this._button.setAttribute('disabled', true)
     } else {
-      this.addInactiveButtonClass(buttonElement);
+      this._button.classList.remove(this._inactiveButtonClass);
+      this._button.removeAttribute('disabled')
     }
   }
 
   _setEventListener() {
-    const inputElements = Array.from(
-      this._form.querySelectorAll(this._inputSelector)
-    );
-    const buttonElement = this._form.querySelector(this._submitButtonSelector);
-
-    inputElements.forEach((input) => {
-      input.addEventListener("input", (evt) => {
-        this._toggleButtonState(buttonElement);
-        this._checkInputValidity(evt.target);
-      });
-    });
-    this._toggleButtonState(buttonElement);
+    this._toggleSubmitButton()
+    this._inputList.forEach((input) => {
+      input.addEventListener('input', () => {
+        this._checkInputValidity(input);
+        this._toggleSubmitButton();
+      })
+    })
+    
   }
 
   enableValidation() {
-    this._form.addEventListener("submit", (evt) => {
-      evt.preventDefault();
-    });
-    this._setEventListener();
+    this._setEventListener()
   }
 }

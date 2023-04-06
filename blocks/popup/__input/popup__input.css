@@ -2,8 +2,7 @@
     font-family: 'Inter', 'Arial', sans-serif;
     font-style: normal;
     font-weight: normal;
-    /* margin: 0 auto 30px; */
-    padding: 13px 0;
+    padding: 0 0 13px;
     border: 0;
     width: 100%;
     box-sizing: border-box;
@@ -11,8 +10,10 @@
     font-size: 14px;
     line-height: 17px;
     color: #000;
+    margin-bottom: 35px;
+    outline: none;
 }
 
-.popup__input:last-of-type {
+/* .popup__input:last-of-type {
     margin-bottom: 0;
-}
+} */
