@@ -15,7 +15,6 @@ const cardAddForm = cardAddPopup.querySelector(".popup__form_type_add-card");
 
 const profileEditButton = document.querySelector(".profile__edit-button");
 const cardAddButton = document.querySelector(".profile__add-button");
-// const popupSaveButton  = document.querySelector(".popup__save-button");
 
 const titleInput = document.querySelector(".popup__input_title"); 
 const linkInput = document.querySelector(".popup__input_link"); 
@@ -73,20 +72,20 @@ const handleCardClick = (cardName, cardLink) => {
     openPopup(galleryPopup);
 };
 
-const createElement = (item) => {
-    const card = new Card (item, CARD_ITEM_TEMPLATE_SELECTOR, handleCardClick);
+const createCard = (cardData) => {
+    const card = new Card (cardData, CARD_ITEM_TEMPLATE_SELECTOR, handleCardClick);
     const cardElement = card.generateCard();
 
     return cardElement;
 }
 
-const renderCard = (item, wrapElement) => {
-    const element = createElement(item);
+const renderCard = (cardData, wrapElement) => {
+    const element = createCard(cardData);
     wrapElement.prepend(element);
 }
 
-initialCards.forEach(function(item) {
-    renderCard(item, cardsContainer, handleCardClick);
+initialCards.forEach(function(cardData) {
+    renderCard(cardData, cardsContainer, handleCardClick);
 });
 
 
@@ -99,7 +98,7 @@ function closePopup(element) {
 
 function handleClickOnOverlay(e) { 
     if (e.target === e.currentTarget) { 
-        const popupOpened = document.querySelector('.popup_opened');
+        const popupOpened = e.target;
         closePopup(popupOpened); 
     };
 };
@@ -107,30 +106,28 @@ function handleClickOnOverlay(e) {
 function handleEscapeButton(e) {
     if (e.key === "Escape") {
         const popupOpened = document.querySelector('.popup_opened');
+        // ToDo
+        // console.log(e.target === e.currentTarget);
+        // if (e.target !== e.currentTarget) { closePopup(popupOpened); }
         closePopup(popupOpened);
     };
 };
 
-// Close popups
-profileEditPopup.addEventListener("click", handleClickOnOverlay);
-cardAddPopup.addEventListener("click", handleClickOnOverlay);
-galleryPopup.addEventListener("click", handleClickOnOverlay);
-
 // Submit handlers
-function formEditSubmitHandler (e) {
+function handleProfileFormSubmit (e) {
     e.preventDefault();
     authorName.textContent = nameInput.value;
     authorJob.textContent = jobInput.value;
     closePopup(profileEditPopup);
 };
 
-const formAddSubmitHandler = (e) => {
+const handleCardFormSubmit = (e) => {
     e.preventDefault();
-    const image = {
+    const cardData = {
         name: titleInput.value,
         link: linkInput.value,
     }
-    renderCard(image, cardsContainer);
+    renderCard(cardData, cardsContainer);
     closePopup(cardAddPopup);
 }
 
@@ -138,5 +135,5 @@ profileCloseButton.addEventListener("click", () => closePopup(profileEditPopup))
 cardCloseButton.addEventListener("click", () => closePopup(cardAddPopup));
 galleryCloseButton.addEventListener("click", () => closePopup(galleryPopup));
 
-cardAddForm.addEventListener("submit", formAddSubmitHandler);
-profileEditForm.addEventListener("submit", formEditSubmitHandler);
+cardAddForm.addEventListener("submit", handleCardFormSubmit);
+profileEditForm.addEventListener("submit", handleProfileFormSubmit);
