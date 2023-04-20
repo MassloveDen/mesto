@@ -16,13 +16,13 @@ export class Popup {
     }
 
     close() {
-        this._popupElement.classList.add('popup_opened');
+        this._popupElement.classList.remove('popup_opened');
         document.removeEventListener('keydown', this._handleEscClose);
     }
 
     setEventListeners() {
         this._popupElement.addEventListener('click', (e) => {
-            if (e.target.classList.contains('popup') || e.target.classList.contains('popup_close')) {
+            if (e.target.classList.contains('popup') || e.target.classList.contains('popup__close-button')) {
                 this.close()
             }
         });

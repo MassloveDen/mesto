@@ -14,4 +14,4 @@ module.exports = {
     // стандартные настройки минификации
     cssnano({ preset: 'default' })
   ]
-};
+}; 
