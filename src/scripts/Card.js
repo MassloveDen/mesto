@@ -8,9 +8,7 @@ export class Card {
     this._cardTitle = this._element.querySelector(".element__figcaption");
     this._cardLink = this._element.querySelector(".element__image");
     this._cardLikeButton = this._element.querySelector(".element__like-button");
-    this._cardDeleteButton = this._element.querySelector(
-      ".element__delete-button"
-    );
+    this._cardDeleteButton = this._element.querySelector(".element__delete-button");
   }
 
   _getTemplate() {
@@ -23,6 +21,8 @@ export class Card {
   }
 
   generateCard() {
+    console.log(this._name);
+    console.log(this._cardTitle);
     this._cardTitle.textContent = this._name;
     this._cardLink.src = this._link;
     this._cardLink.alt = this._name;
