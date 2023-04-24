@@ -87,16 +87,20 @@ const userInfo = new UserInfo({
   userTextSelector: ".profile__job",
 });
 
-profileEditButton.addEventListener("click", () => {
+function handleClickProfileButton() {
   editProfilePopupForm.open();
   const { title, text } = userInfo.getUserInfo();
   nameInput.value = title;
   jobInput.value = text;
-});
+}
 
-cardAddButton.addEventListener("click", () => {
+profileEditButton.addEventListener("click", handleClickProfileButton);
+
+function handleClickCardButton() {
   addCardPopupForm.open();
   cardAddForm.reset();
   cardFormValidator._toggleSubmitButton();
-  // cardFormValidator.resetValidation();
-});
+  cardFormValidator.resetValidation();
+}
+
+cardAddButton.addEventListener("click", handleClickCardButton);
