@@ -99,7 +99,7 @@ profileEditButton.addEventListener("click", handleClickProfileButton);
 function handleClickCardButton() {
   addCardPopupForm.open();
   cardAddForm.reset();
-  cardFormValidator._toggleSubmitButton();
+  cardFormValidator.toggleSubmitButton();
   cardFormValidator.resetValidation();
 }
 
