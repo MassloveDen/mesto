@@ -1,26 +1,42 @@
 import { Popup } from "./Popup.js";
 
 export class PopupWithForm extends Popup {
-  constructor(popupSelector, handleFormSubmit) {
+  constructor({handleFormSubmit}, popupSelector) {
     super(popupSelector);
     this._handleFormSubmit = handleFormSubmit;
     this._formElement = this._popupElement.querySelector(".popup__form");
-    this._inputs = Array.from(
-      this._formElement.querySelectorAll(".popup__input")
-    );
+    this._inputs = Array.from(this._formElement.querySelectorAll(".popup__input"));
+    this._button = this._form.querySelector('.popup__button');
+    this._buttonText = this._button.textContent;
   }
 
   _getInputValues() {
-    this._formValues = {};
-    this._inputs.forEach(input => this._formValues[input.name] = input.value);
-    return this._formValues;   
+    this.values = {};
+    this._inputs.forEach(input => {
+      const name = input.name
+      const value = input.value
+
+      values[name] = value
+    })
+      
+    return values;   
   }
 
   setEventListeners() {
     super.setEventListeners();
     this._formElement.addEventListener("submit", (e) => {
-      this._handleFormSubmit(e, this._getInputValues());
-      this.close();
+      e.preventDefault();
+      const initialText = this._button.textContent;
+      this._button.textContent = 'Сохранение...';
+
+      this._handleFormSubmit(this._getInputValues())
+      .then(() => this.close())
+      .catch((error) => {
+        console.log(error)
+      })
+      .finally(() => {
+        this._button.textContent = initialText;
+      })
     });
   }
 
