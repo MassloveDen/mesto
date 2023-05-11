@@ -9,6 +9,8 @@ import { PopupWithImage } from "../components/PopupWithImage.js";
 import { PopupWithForm } from "../components/PopupWithForm.js";
 import { UserInfo } from "../components/UserInfo.js";
 
+const api = new
+
 const profileEditPopup = document.querySelector(".popup_type_popup-edit-profile");
 const profileEditForm = profileEditPopup.querySelector(".popup__form_type_edit-profile");
 
