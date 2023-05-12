@@ -37,7 +37,7 @@
             <p class="footer__copyright">2023 Mesto Russia</p>
         </footer>
 
-        <div class="popup popup_type_popup-edit-profile">
+        <div class="popup popup_type_popup-edit-profile" id="popup__edit">
             <div class="popup__container">
                 <form name="edit" class="popup__form popup__form_type_edit-profile">
                     <h2 class="popup__heading">Редактировать профиль</h2>
@@ -57,7 +57,7 @@
             </div>
         </div>
 
-        <section class="popup popup_type_popup-add-card">
+        <section class="popup popup_type_popup-add-card" id="popup__add">
             <div class="popup__container">
                 <form name="add" class="popup__form popup__form_type_add-card">
                     <h2 class="popup__heading">Новое место</h2>
@@ -86,10 +86,38 @@
             </div>
         </section>
 
+        <section class="popup popup_avatar" id="popup__avatar">
+            <div class="popup__container">
+              <button class="popup__close"></button>
+              <h2 class="popup__title">Обновить аватар</h2>
+              <form class="popup__form" id="popup__form-avatar" name="avatar" novalidate>
+                <fieldset class="popup__fieldset">
+                  <input class="popup__input popup__input_type_avatar" name="avatar" type="url" 
+                    placeholder="Ссылка на картинку" required minlength="2" id="avatar">
+                  <span id="avatar-error" class="popup__error popup__error_visible"></span>
+                </fieldset>
+                <button type="submit" class="popup__button popup__button_disabled">Сохранить</button>
+              </form>
+            </div>
+        </section>
+
+        <section class="popup popup_confirm">
+            <div class="popup__container">
+                <button class="popup__close"></button>
+                <h2 class="popup__title">Вы уверены?</h2>
+                <form class="popup__form" id="popup__form-confirm" name="confirm" novalidate>
+                <button type="submit" class="popup__button">Да</button>
+                </form>
+            </div>
+        </section>
+          
         <template class="element-template">
             <li class="element">
                 <img src="#" alt="" class="element__image">
                 <p class="element__figcaption"></p>
+                <div class="element__like">
+                    <span class="element__number"></span>
+                </div>
                 <button class="element__like-button buttons" type="button"></button>
                 <button class="element__delete-button buttons" type="button"></button>
             </li>
@@ -99,4 +127,3 @@
 </body>
 
 </html>
-//903055f9-162d-412b-9680-733441b943a2
