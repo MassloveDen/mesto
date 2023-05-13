@@ -36,4 +36,8 @@
 .content{background-color:#000;margin:0 auto 66px}@media screen and (max-width:920px){.content{margin-bottom:48px}}
 .element__like-button_active{background-image:url(images/like-active.75438e944a43e4c0b404.svg);background-position:50%;background-repeat:no-repeat;background-size:contain;border:none;max-width:21px;min-height:18px;width:100%}
 .error{bottom:5px;box-sizing:border-box;color:red;display:block;font-family:Inter,sans-serif;font-size:12px;font-style:normal;font-weight:400;line-height:15px;min-height:25px;position:absolute}.error:last-of-type{margin-bottom:0}
+.element__number{color:#000;font-size:13px;height:13px;line-height:16px;margin:0 auto;width:10px}
+.element__delete-button_inactive{display:none}
+.element__like{display:grid;gap:3px;max-height:35px;min-width:22px;padding-top:22px}
+.elements__context{color:#fff;display:flex;justify-content:space-between;margin-left:21px;margin-right:20px;max-width:100%}@media screen and (max-width:568px){.elements__context{margin-right:15px}}
 body{background-color:#000}
