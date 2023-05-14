@@ -38,9 +38,10 @@
 @import url("../blocks/content/content.css");
 @import url("../blocks/element/__like-button/_active/element__like-button_active.css");
 @import url("../blocks/error/error.css");
-@import url("../blocks/element/__number/element__number.js");
+@import url("../blocks/element/__number/element__number.css");
 @import url("../blocks/element/__delete-button/_inactive/element__delete-button_inactive.css");
 @import url("../blocks/element/__like/element__like.css");
+@import url("../blocks/element/__context/element__context.css");
 
 
 body{

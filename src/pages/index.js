@@ -1,6 +1,6 @@
 import "./index.css";
 
-import { initialCards } from "../utils/initialCards.js";
+// import { initialCards } from "../utils/initialCards.js";
 import { validationSettings } from "../utils/validationSettings";
 import { Card } from "../components/Card.js";
 import { FormValidator } from "../components/FormValidator.js";
@@ -9,7 +9,6 @@ import { PopupWithImage } from "../components/PopupWithImage.js";
 import { PopupWithForm } from "../components/PopupWithForm.js";
 import { UserInfo } from "../components/UserInfo.js";
 import { Api } from "../components/Api.js";
-// import { data } from "autoprefixer";
 import { PopupWithConfirmation } from "../components/PopupWithConfirmation.js";
 import { data } from "autoprefixer";
 import { config } from "webpack";
@@ -28,6 +27,16 @@ const userInfo = new UserInfo({
   avatarSelector: ".profile__avatar",
 });
 
+const cardList = new Section(
+  {
+    renderer: (cardData) => {
+      const newCard = createCard(cardData);
+      cardList.addItem(newCard);
+    },
+  },
+  cardsContainer
+);
+
 const profileEditPopup = document.querySelector(
   ".popup_type_popup-edit-profile"
 );
@@ -38,8 +47,8 @@ const profileEditForm = profileEditPopup.querySelector(
 const nameInput = profileEditForm.querySelector(".popup__input_name");
 const jobInput = profileEditForm.querySelector(".popup__input_job");
 
-const cardAddPopup = document.querySelector(".popup_type_popup-add-card");
-const cardAddForm = cardAddPopup.querySelector(".popup__form_type_add-card");
+// const cardAddPopup = document.querySelector(".popup_type_popup-add-card");
+// const cardAddForm = cardAddPopup.querySelector(".popup__form_type_add-card");
 
 const profileEditButton = document.querySelector(".profile__edit-button");
 const cardAddButton = document.querySelector(".profile__add-button");
@@ -64,15 +73,7 @@ const popupWithConfirmation = new PopupWithConfirmation(
 );
 popupWithConfirmation.setEventListeners();
 
-const cardList = new Section(
-  {
-    renderer: (cardData) => {
-      const newCard = createCard(cardData);
-      cardList.addItem(newCard);
-    },
-  },
-  cardsContainer
-);
+
 
 const renderInitCards = (cards) => {
   cardList.renderCards(cards);
