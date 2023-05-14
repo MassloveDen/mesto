@@ -4,7 +4,7 @@ export class Api {
       this._baseUrl = this._options.baseUrl;
       this._headers = this._options.headers;
     }
-  
+ 
     _checkResponse(response) {
       if (response.ok) {
         return response.json();
