@@ -42,6 +42,7 @@
 @import url("../blocks/element/__delete-button/_inactive/element__delete-button_inactive.css");
 @import url("../blocks/element/__like/element__like.css");
 @import url("../blocks/element/__context/element__context.css");
+@import url("../blocks/profile/__avatar-edit/profile__avatar-edit.css");
 
 
 body{

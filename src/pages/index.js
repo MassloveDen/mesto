@@ -10,8 +10,6 @@ import { PopupWithForm } from "../components/PopupWithForm.js";
 import { UserInfo } from "../components/UserInfo.js";
 import { Api } from "../components/Api.js";
 import { PopupWithConfirmation } from "../components/PopupWithConfirmation.js";
-import { data } from "autoprefixer";
-import { config } from "webpack";
 
 const api = new Api({
   baseUrl: "https://mesto.nomoreparties.co/v1/cohort-65",
@@ -72,8 +70,6 @@ const popupWithConfirmation = new PopupWithConfirmation(
   handleCardDelete
 );
 popupWithConfirmation.setEventListeners();
-
-
 
 const renderInitCards = (cards) => {
   cardList.renderCards(cards);
@@ -146,7 +142,6 @@ const addCardPopupForm = new PopupWithForm(
   "#popup__add"
 );
 addCardPopupForm.setEventListeners();
-
 
 const editProfilePopupForm = new PopupWithForm(
   {
