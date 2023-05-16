@@ -10,30 +10,9 @@ import { PopupWithForm } from "../components/PopupWithForm.js";
 import { UserInfo } from "../components/UserInfo.js";
 import { Api } from "../components/Api.js";
 import { PopupWithConfirmation } from "../components/PopupWithConfirmation.js";
+import { log } from "util";
 
-const api = new Api({
-  baseUrl: "https://mesto.nomoreparties.co/v1/cohort-65",
-  headers: {
-    authorization: "903055f9-162d-412b-9680-733441b943a2",
-    "Content-Type": "application/json",
-  },
-});
 
-const userInfo = new UserInfo({
-  userTitleSelector: ".profile__name",
-  userTextSelector: ".profile__job",
-  avatarSelector: ".profile__avatar",
-});
-
-const cardList = new Section(
-  {
-    renderer: (cardData) => {
-      const newCard = createCard(cardData);
-      cardList.addItem(newCard);
-    },
-  },
-  cardsContainer
-);
 
 const profileEditPopup = document.querySelector(
   ".popup_type_popup-edit-profile"
@@ -74,6 +53,30 @@ popupWithConfirmation.setEventListeners();
 const renderInitCards = (cards) => {
   cardList.renderCards(cards);
 };
+
+const api = new Api({
+  baseUrl: "https://mesto.nomoreparties.co/v1/cohort-65",
+  headers: {
+    authorization: "903055f9-162d-412b-9680-733441b943a2",
+    "Content-Type": "application/json",
+  },
+});
+
+const userInfo = new UserInfo({
+  userTitleSelector: ".profile__name",
+  userTextSelector: ".profile__job",
+  avatarSelector: ".profile__avatar",
+});
+
+const cardList = new Section(
+  {
+    renderer: (cardData) => {
+      const newCard = createCard(cardData);
+      cardList.addCard(newCard);
+    },
+  },
+  cardsContainer
+);
 
 Promise.all([api.getInfo(), api.getInitialCards()])
   .then(([data, initialCards]) => {
