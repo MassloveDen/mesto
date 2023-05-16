@@ -9,16 +9,16 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 
-const nodeExternals = require("webpack-node-externals");
+// const nodeExternals = require("webpack-node-externals");
 
 
 module.exports = {
   entry: {
     main: "./src/pages/index.js",
   },
-  target: "async-node",
-  externalsPresets: { node: true },   // <-- here
-  externals: [nodeExternals()],  
+  // target: "async-node",
+  // externalsPresets: { node: true },   // <-- here
+  // externals: [nodeExternals()],  
   output: {
     path: path.resolve(__dirname, "dist"),
     // path: path.resolve(__dirname, "./dist"),

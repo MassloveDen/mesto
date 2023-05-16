@@ -5,7 +5,7 @@ export class PopupWithConfirmation extends Popup {
     super(popupSelector);
     this._cardDeleteHandler = cardDeleteHandler;
     this._form = this._popupElement.querySelector(".popup__form");
-    this._button = this._form.querySelector(".popup_button");
+    this._button = this._form.querySelector(".popup__save-button");
     this._buttonText = this._button.textContent;
   }
 

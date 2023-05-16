@@ -50,7 +50,7 @@ const jobInput = profileEditForm.querySelector(".popup__input_job");
 
 const profileEditButton = document.querySelector(".profile__edit-button");
 const cardAddButton = document.querySelector(".profile__add-button");
-const profileAvatarButton = document.querySelector(".profile__edit-avatar");
+const profileAvatarButton = document.querySelector(".profile__avatar-edit");
 
 // Cards
 const CARD_ITEM_TEMPLATE_SELECTOR = ".element-template";

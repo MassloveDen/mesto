@@ -8,8 +8,8 @@ export class UserInfo {
 
   getUserInfo() {
     return {
-      name: this._profileTitle.textContent,
-      info: this._profileText.textContent,
+      name: this._name.textContent,
+      info: this._info.textContent,
       avatar: this._avatar.src
     };
   }
