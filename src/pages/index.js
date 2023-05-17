@@ -44,11 +44,6 @@ profileFormValidation.enableValidation();
 const popupWithImage = new PopupWithImage(".popup_type_popup-gallery");
 popupWithImage.setEventListeners();
 
-const popupWithConfirmation = new PopupWithConfirmation(
-  ".popup_confirm",
-  handleCardDelete
-);
-popupWithConfirmation.setEventListeners();
 
 const renderInitCards = (cards) => {
   cardList.renderCards(cards);
@@ -134,6 +129,7 @@ const addCardPopupForm = new PopupWithForm(
   {
     handleFormSubmit: async (card) => {
       try {
+        console.log(card)
         const data = await api.createCard(card);
         const cardElement = createCard(data);
         cardList.prependCard(cardElement);
@@ -145,6 +141,13 @@ const addCardPopupForm = new PopupWithForm(
   "#popup__add"
 );
 addCardPopupForm.setEventListeners();
+
+
+const popupWithConfirmation = new PopupWithConfirmation(
+  ".popup_confirm",
+  (card) => handleCardDelete(card)
+);
+popupWithConfirmation.setEventListeners();
 
 const editProfilePopupForm = new PopupWithForm(
   {
