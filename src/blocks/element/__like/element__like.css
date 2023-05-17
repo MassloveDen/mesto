@@ -11,6 +11,8 @@
     min-width: 22px;
     max-height: 35px;
     padding-top: 22px;
-    display: grid;
+    display: flex;
     gap: 3px;
+    flex-direction: column;
+    align-items:center;
 }
