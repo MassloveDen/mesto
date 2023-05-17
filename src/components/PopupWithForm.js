@@ -11,7 +11,7 @@ export class PopupWithForm extends Popup {
   }
 
   _getInputValues() {
-    this.values = {};
+    const values = {};
     this._inputs.forEach(input => {
       const name = input.name
       const value = input.value
@@ -28,7 +28,6 @@ export class PopupWithForm extends Popup {
       e.preventDefault();
       const initialText = this._button.textContent;
       this._button.textContent = 'Сохранение...';
-
       this._handleFormSubmit(this._getInputValues())
       .then(() => this.close())
       .catch((error) => {

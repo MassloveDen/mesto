@@ -7,6 +7,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const NodePoly = require("node-polyfill-webpack-plugin");
 
 
 // const nodeExternals = require("webpack-node-externals");
@@ -32,9 +33,10 @@ module.exports = {
 
     open: true,
     compress: true,
-    // port: 8080,
+    port: 8080,
   },
   // fallback: {
+    // "util": false,
   //   "fs": false,
   //   "tls": false,
   //   "net": false,
@@ -54,19 +56,19 @@ module.exports = {
         exclude: "/node_modules/",
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        test: /\.(png|svg|jpg|jpeg|gif|woff|woff2|eot|ttf|otf)$/,
         type: "asset/resource",
-        generator: {
-          filename: "images/[name].[hash][ext]",
-        },
+        // generator: {
+        //   filename: "images/[name].[hash][ext]",
+        // },
       },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: "asset/resource",
-        generator: {
-          filename: "fonts/[name].[hash][ext]",
-        },
-      },
+      // {
+      //   test: /\.(woff|woff2|eot|ttf|otf)$/i,
+      //   type: "asset/resource",
+      //   // generator: {
+      //   //   filename: "fonts/[name].[hash][ext]",
+      //   // },
+      // },
       {
         test: /\.css$/,
         use: [
@@ -88,5 +90,6 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
+    new NodePoly(),
   ],
 };

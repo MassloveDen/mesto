@@ -18,8 +18,10 @@
 
         <main class="content">
             <section class="profile">
-                <img src="<%=require('./images/jacques-photo.png')%>" alt="Аватар" class="profile__avatar">
-                <button type="button" class="profile__avatar-edit"></button>
+                <div class="profile__edit-avatar">
+                    <img src="<%=require('./images/jacques-photo.png')%>" alt="Аватар" class="profile__avatar">
+                    <button type="button" class="profile__avatar-edit"></button>
+                </div>
                 <div class="profile__info">
                     <h1 class="profile__name">Жак-Ив Кусто</h1>
                     <button type="button" class="profile__edit-button buttons"></button>
@@ -89,13 +91,13 @@
 
         <section class="popup popup_avatar" id="popup__avatar">
             <div class="popup__container">
-              <button class="popup__close"></button>
-              <h2 class="popup__title">Обновить аватар</h2>
+              <button class="popup__close-button buttons"></button>
+              <h2 class="popup__heading">Обновить аватар</h2>
               <form class="popup__form" id="popup__form-avatar" name="avatar" novalidate>
-                <fieldset class="popup__fieldset">
+                <fieldset class="popup__fields">
                   <input class="popup__input popup__input_type_avatar" name="avatar" type="url" 
                     placeholder="Ссылка на картинку" required minlength="2" id="avatar">
-                  <span id="avatar-error" class="popup__error popup__error_visible"></span>
+                  <span id="avatar-error" class="error"></span>
                 </fieldset>
                 <button type="submit" class="popup__save-button popup__button_disabled">Сохранить</button>
               </form>
@@ -118,14 +120,22 @@
               <div class="element__context">
                 <h2 class="element__figcaption"></h2>
                 <div class="element__like">
+                  <button type="button" class="element__like-button"></button>
                   <span class="element__number"></span>
-                  <button type="button" class="element__button-like"></button>
                 </div>
-                <button type="button" class="element__button-delete"></button>
+                <button type="button" class="element__delete-button"></button>
               </div>
             </div>
           </template>
 
+          <template class="element-template">
+            <li class="element">
+                <img src="#" alt="" class="element__image">
+                <p class="element__figcaption"></p>
+                <button class="element__like-button buttons" type="button"></button>
+                <button class="element__delete-button buttons" type="button"></button>
+            </li>
+        </template>
         <!-- <template class="element-template">
             <li class="element">
                 <img src="#" alt="" class="element__image">

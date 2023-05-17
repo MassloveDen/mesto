@@ -1,14 +1,16 @@
-.elements__context {
-    max-width: 100%;
-    color: #fff;
-    display: flex;
-    margin-left: 21px;
-    margin-right: 20px;
-    justify-content: space-between;
+.element__context {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 21px;
+  margin-right: 20px;
+  max-width: 100%;
+  width: 100%;
+
   }
   
   @media screen and (max-width: 568px) {
-    .elements__context {
+    .element__context {
       margin-right: 15px;
     }
   }

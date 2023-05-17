@@ -6,12 +6,13 @@ export class Card {
     { handleCardClick, handleLikeClick, handleDeleteClick }
   ) {
     this.initialCards = cardData;
-    this._name = this.cardData.name;
-    this._link = this.cardData.link;
+
+    this._name = this.initialCards.name;
+    this._link = this.initialCards.link;
     this._templateSelector = templateSelector;
     this._handleCardClick = handleCardClick;
     this._userId = userId;
-    this._ownerId = item.owner._id;
+    this._ownerId = this.initialCards.owner._id;
     this._cardId = this.initialCards._id;
     this._cardOwnerId = this.initialCards.owner._id;
     this._handleDeleteClick = handleDeleteClick;

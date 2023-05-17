@@ -43,6 +43,7 @@
 @import url("../blocks/element/__like/element__like.css");
 @import url("../blocks/element/__context/element__context.css");
 @import url("../blocks/profile/__avatar-edit/profile__avatar-edit.css");
+@import url("../blocks/profile/__edit-avatar/profile__edit-avatar.css");
 
 
 body{
