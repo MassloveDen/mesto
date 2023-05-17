@@ -10,36 +10,7 @@ import { PopupWithForm } from "../components/PopupWithForm.js";
 import { UserInfo } from "../components/UserInfo.js";
 import { Api } from "../components/Api.js";
 import { PopupWithConfirmation } from "../components/PopupWithConfirmation.js";
-import { log } from "util";
-
-
-
-const profileEditPopup = document.querySelector(
-  ".popup_type_popup-edit-profile"
-);
-const profileEditForm = profileEditPopup.querySelector(
-  ".popup__form_type_edit-profile"
-);
-
-const nameInput = profileEditForm.querySelector(".popup__input_name");
-const jobInput = profileEditForm.querySelector(".popup__input_job");
-
-// const cardAddPopup = document.querySelector(".popup_type_popup-add-card");
-// const cardAddForm = cardAddPopup.querySelector(".popup__form_type_add-card");
-
-const profileEditButton = document.querySelector(".profile__edit-button");
-const cardAddButton = document.querySelector(".profile__add-button");
-const profileAvatarButton = document.querySelector(".profile__avatar-edit");
-
-// Cards
-const CARD_ITEM_TEMPLATE_SELECTOR = ".element-template";
-const cardsContainer = document.querySelector(".elements__list");
-
-const profileFormValidation = new FormValidator(
-  validationSettings,
-  profileEditForm
-);
-profileFormValidation.enableValidation();
+import { cardAddButton, CARD_ITEM_TEMPLATE_SELECTOR, cardsContainer, jobInput, nameInput, profileAvatarButton, profileEditButton } from "../utils/constants.js"
 
 const popupWithImage = new PopupWithImage(".popup_type_popup-gallery");
 popupWithImage.setEventListeners();
@@ -208,5 +179,6 @@ cardAddButton.addEventListener("click", () => {
 
 profileAvatarButton.addEventListener("click", () => {
   avatarPopupForm.open();
+  formValidators["avatar"].toggleSubmitButton();
   formValidators["avatar"].resetValidation();
 });
