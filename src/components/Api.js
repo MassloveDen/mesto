@@ -44,7 +44,7 @@ export class Api {
         headers: this._headers,
         method: "POST",
         body: JSON.stringify({
-          name: data.title,
+          name: data.name,
           link: data.link,
         }),
       });

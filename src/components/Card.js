@@ -58,9 +58,11 @@ export class Card {
   }
 
   defineLikes() {
+    console.log(this._userId, this._likes, )
     return this._likes.some((like) => like._id === this._userId);
   }
 
+  
   switchLikes() {
     if (this.defineLikes()) {
       this._cardLikeButton.classList.add("element__like-button_active");
@@ -70,6 +72,7 @@ export class Card {
   }
 
   setLikes(initialCards) {
+    console.log(initialCards);
     this._likes = initialCards.likes;
     this._cardLikeNumber.textContent = this._likes.length;
     this._handleLikeButton();
@@ -104,7 +107,7 @@ export class Card {
     });
 
     this._cardDeleteButton.addEventListener("click", () => {
-      this._handleDeleteButton();
+      this._handleDeleteClick();
     });
   }
 }

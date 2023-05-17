@@ -18,7 +18,7 @@ export class UserInfo {
     this._name.textContent = data.name;
     this._info.textContent = data.about;
     this._avatar.src = data.avatar;
-    this._userId = data.id
+    this._userId = data._id
   }
 
   getUserId() {
